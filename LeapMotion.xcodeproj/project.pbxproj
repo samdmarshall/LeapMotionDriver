@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		22E649EC18371776006A5E8C /* Install and Load */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22E649ED18371777006A5E8C /* Build configuration list for PBXAggregateTarget "Install and Load" */;
+			buildPhases = (
+				22E649F218371786006A5E8C /* ShellScript */,
+			);
+			dependencies = (
+				22E649F11837177D006A5E8C /* PBXTargetDependency */,
+			);
+			name = "Install and Load";
+			productName = "Install and Load";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		22E649DE18371496006A5E8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22E649DC18371496006A5E8C /* InfoPlist.strings */; };
+		22E649E118371496006A5E8C /* LeapMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22E649E018371496006A5E8C /* LeapMotion.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22E649F01837177D006A5E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22E649CA18371496006A5E8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E649D318371496006A5E8C;
+			remoteInfo = LeapMotion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22E649D418371496006A5E8C /* LeapMotion.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeapMotion.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E649D818371496006A5E8C /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		22E649DB18371496006A5E8C /* LeapMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeapMotion-Info.plist"; sourceTree = "<group>"; };
+		22E649DD18371496006A5E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22E649DF18371496006A5E8C /* LeapMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeapMotion.h; sourceTree = "<group>"; };
+		22E649E018371496006A5E8C /* LeapMotion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LeapMotion.cpp; sourceTree = "<group>"; };
+		22E649E218371496006A5E8C /* LeapMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeapMotion-Prefix.pch"; sourceTree = "<group>"; };
+		22E649F31837193D006A5E8C /* Build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Build.sh; sourceTree = "<group>"; };
+		22E649F418371FE8006A5E8C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		22E649F618371FF0006A5E8C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22E649CF18371496006A5E8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22E649C918371496006A5E8C = {
+			isa = PBXGroup;
+			children = (
+				22E649F31837193D006A5E8C /* Build.sh */,
+				22E649D918371496006A5E8C /* LeapMotion */,
+				22E649D618371496006A5E8C /* Frameworks */,
+				22E649D518371496006A5E8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22E649D518371496006A5E8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22E649D418371496006A5E8C /* LeapMotion.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22E649D618371496006A5E8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22E649F618371FF0006A5E8C /* CoreFoundation.framework */,
+				22E649F418371FE8006A5E8C /* IOKit.framework */,
+				22E649D718371496006A5E8C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22E649D718371496006A5E8C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22E649D818371496006A5E8C /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		22E649D918371496006A5E8C /* LeapMotion */ = {
+			isa = PBXGroup;
+			children = (
+				22E649DF18371496006A5E8C /* LeapMotion.h */,
+				22E649E018371496006A5E8C /* LeapMotion.cpp */,
+				22E649DA18371496006A5E8C /* Supporting Files */,
+			);
+			path = LeapMotion;
+			sourceTree = "<group>";
+		};
+		22E649DA18371496006A5E8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22E649DB18371496006A5E8C /* LeapMotion-Info.plist */,
+				22E649DC18371496006A5E8C /* InfoPlist.strings */,
+				22E649E218371496006A5E8C /* LeapMotion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22E649D018371496006A5E8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		22E649D318371496006A5E8C /* LeapMotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E649E518371496006A5E8C /* Build configuration list for PBXNativeTarget "LeapMotion" */;
+			buildPhases = (
+				22E649CE18371496006A5E8C /* Sources */,
+				22E649CF18371496006A5E8C /* Frameworks */,
+				22E649D018371496006A5E8C /* Headers */,
+				22E649D118371496006A5E8C /* Resources */,
+				22E649D218371496006A5E8C /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeapMotion;
+			productName = LeapMotion;
+			productReference = 22E649D418371496006A5E8C /* LeapMotion.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22E649CA18371496006A5E8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Sam Marshall";
+			};
+			buildConfigurationList = 22E649CD18371496006A5E8C /* Build configuration list for PBXProject "LeapMotion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22E649C918371496006A5E8C;
+			productRefGroup = 22E649D518371496006A5E8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22E649D318371496006A5E8C /* LeapMotion */,
+				22E649EC18371776006A5E8C /* Install and Load */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22E649D118371496006A5E8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E649DE18371496006A5E8C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		22E649D218371496006A5E8C /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E649F218371786006A5E8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/Build.sh";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22E649CE18371496006A5E8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E649E118371496006A5E8C /* LeapMotion.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22E649F11837177D006A5E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22E649D318371496006A5E8C /* LeapMotion */;
+			targetProxy = 22E649F01837177D006A5E8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22E649DC18371496006A5E8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E649DD18371496006A5E8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22E649E318371496006A5E8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		22E649E418371496006A5E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		22E649E618371496006A5E8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeapMotion/LeapMotion-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "LeapMotion/LeapMotion-Info.plist";
+				MODULE_NAME = com.samdmarshall.LeapMotion;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		22E649E718371496006A5E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeapMotion/LeapMotion-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "LeapMotion/LeapMotion-Info.plist";
+				MODULE_NAME = com.samdmarshall.LeapMotion;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		22E649EE18371777006A5E8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22E649EF18371777006A5E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22E649CD18371496006A5E8C /* Build configuration list for PBXProject "LeapMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E649E318371496006A5E8C /* Debug */,
+				22E649E418371496006A5E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22E649E518371496006A5E8C /* Build configuration list for PBXNativeTarget "LeapMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E649E618371496006A5E8C /* Debug */,
+				22E649E718371496006A5E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22E649ED18371777006A5E8C /* Build configuration list for PBXAggregateTarget "Install and Load" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E649EE18371777006A5E8C /* Debug */,
+				22E649EF18371777006A5E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22E649CA18371496006A5E8C /* Project object */;
+}
