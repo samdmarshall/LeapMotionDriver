@@ -3,14 +3,14 @@
 
 #include "LeapMotion.h"
 
-static UInt32 messageCount = 0;
+static UInt32 messageCount = 0x0;
 
 OSDefineMetaClassAndStructors(LeapMotionController, IOService)
 
 bool LeapMotionController::init(OSDictionary *dict) {
     bool result = IOService::init(dict);
     LM_IOLog("LeapMotionDriver - Initializing\n");
-	for (UInt32 i = 0; i < LeapMotionConnections; i++) {
+	for (UInt32 i = 0x0; i < LeapMotionConnections; i++) {
         connection[i].controller = NULL;
         connection[i].inController = NULL;
         connection[i].outController = NULL;
@@ -27,7 +27,7 @@ bool LeapMotionController::didTerminate (IOService *provider, IOOptionBits optio
 }
 
 void LeapMotionController::ReleaseAll(void) {
-	for (UInt32 i = 0; i < LeapMotionConnections; i++) {
+	for (UInt32 i = 0x0; i < LeapMotionConnections; i++) {
 		
         if (connection[i].service != NULL) {
             connection[i].service->terminate(kIOServiceRequired);
@@ -75,7 +75,7 @@ IOService* LeapMotionController::probe(IOService *provider, SInt32 *score) {
 	device = OSDynamicCast(IOUSBDevice, provider);
 	if (device != NULL) {
 		UInt8 configurationCount = device->GetNumConfigurations();
-		if (configurationCount < 1) {
+		if (configurationCount < 0x1) {
 			LM_IOLog("LeapMotionDriver - Cannot find configurations\n");
 		} else {
 			LM_IOLog("LeapMotionDriver - Found %d configurations!\n",configurationCount);
@@ -89,12 +89,12 @@ IOService* LeapMotionController::probe(IOService *provider, SInt32 *score) {
 }
 
 bool LeapMotionController::start(IOService *provider) {
-	messageCount = 0;
+	messageCount = 0x0;
     bool result = IOService::start(provider);
     LM_IOLog("LeapMotionDriver - Starting\n");
 	if (device != NULL) {
 		LM_IOLog("LeapMotionDriver - Device - Active\n");
-		const IOUSBConfigurationDescriptor *configDescription = device->GetFullConfigurationDescriptor(0);
+		const IOUSBConfigurationDescriptor *configDescription = device->GetFullConfigurationDescriptor(0x0);
 		if (!configDescription) {
 			result = false;
 		} else {
@@ -107,15 +107,15 @@ bool LeapMotionController::start(IOService *provider) {
 				interfaceRequest.bInterfaceClass = kIOUSBFindInterfaceDontCare;
 				interfaceRequest.bInterfaceSubClass = kIOUSBFindInterfaceDontCare;
 				interfaceRequest.bInterfaceProtocol = kIOUSBFindInterfaceDontCare;
-				interfaceRequest.bAlternateSetting = 0;
+				interfaceRequest.bAlternateSetting = 0x0;
 				
 				IOUSBFindEndpointRequest pipeRequest;
-				pipeRequest.interval = 0;
-				pipeRequest.maxPacketSize = 0;
+				pipeRequest.interval = 0x0;
+				pipeRequest.maxPacketSize = 0x0;
 				pipeRequest.type = kUSBInterrupt;
 				
-				UInt32 connections = 0 + connectionCount;
-				UInt32 interfaceCount = 0;
+				UInt32 connections = 0x0 + connectionCount;
+				UInt32 interfaceCount = 0x0;
 				IOUSBInterface *interface = NULL;
 				while ((interface = device->FindNextInterface(interface, &interfaceRequest)) != NULL) {
 					LM_IOLog("LeapMotionDriver - Device - Interface %d\n",interfaceCount);

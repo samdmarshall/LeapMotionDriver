@@ -13,8 +13,8 @@
 #define LM_IOLog(format,...) 
 #endif
 
-#define LeapMotionDeviceCount 5
-#define LeapMotionConnections 2*LeapMotionDeviceCount
+#define LeapMotionDeviceCount 0x5
+#define LeapMotionConnections 0x2*LeapMotionDeviceCount
 
 #define LeapMotionController com_samdmarshall_driver_LeapMotion
 
@@ -31,7 +31,7 @@ class LeapMotionController : public IOService
 {
 	OSDeclareDefaultStructors(LeapMotionController)
 public:
-    virtual bool init(OSDictionary *dictionary = 0);
+    virtual bool init(OSDictionary *dictionary = 0x0);
     virtual void free(void);
     virtual IOService *probe(IOService *provider, SInt32 *score);
     virtual bool start(IOService *provider);
